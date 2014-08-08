@@ -7,6 +7,7 @@ class Scribe < Formula
   head 'https://github.com/swiftype/scribe.git'
 
   depends_on 'cmake' => :build
+  depends_on 'libevent'
   depends_on 'thrift'
 
   def install
