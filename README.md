@@ -27,7 +27,7 @@ When this is done, you could check to make sure your Homebrew actually sees our 
         From: https://github.com/swiftype/homebrew-scribe/blob/master/scribe.rb
         ==> Dependencies
         Build: cmake ✔
-        Required: thrift ✔
+        Required: libevent ✔, thrift ✔
 
 Now you are ready to install Scribe server on your machine:
 
@@ -47,3 +47,20 @@ you will need to start it with whatever configuration you like. For more informa
 configure or run Scribe, please check their
 [official documentation](https://github.com/facebookarchive/scribe/wiki).
 
+### Troubleshooting
+
+If you experience any issues with the build, first thing to try should be `brew update` to make sure
+you have the latest versions of homebrew formulas.
+
+If your Scribe installation still fails, there is a chance you already had a bit outdated version
+of `thrift` installed. Please try to uninstall thrift (`brew uninstall thrift` until all
+versions of it are gone) and then try to install scribe again (it will install the latest thrift
+version as a dependency).
+
+If you still could not install Scribe, please file an issue with this repo and include the output
+of the following commands:
+
+  * `uname -a`
+  * `brew info scribe`
+  * `brew info thrift`
+  * `brew install -vd scribe`
