@@ -8,7 +8,7 @@ class Scribe < Formula
 
   depends_on 'cmake' => :build
   depends_on 'libevent'
-  depends_on 'thrift'
+  depends_on 'thrift' => 'with-libevent'
 
   def install
     system "cmake", ".", *std_cmake_args
