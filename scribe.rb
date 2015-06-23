@@ -3,7 +3,7 @@ require 'formula'
 class Scribe < Formula
   homepage 'https://github.com/facebookarchive/scribe'
   url 'https://github.com/swiftype/scribe/archive/ffb20bcd03f0a379b84ea4e906decfa2f59f3e68.zip'
-  sha1 '056f3e2c2657b869066c859132e97e8fbd404d0d'
+  sha1 'a55bf54299a5bf2f0933589fc130854a73e6cd68'
   head 'https://github.com/swiftype/scribe.git'
 
   depends_on 'cmake' => :build
